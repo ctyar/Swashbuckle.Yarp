@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+    <OpenApiGenerateDocuments>false</OpenApiGenerateDocuments>
+    <LangVersion>preview</LangVersion>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Ctyar.Swashbuckle.Yarp</RootNamespace>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <AnalysisLevel>preview</AnalysisLevel>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>Ctyar.Swashbuckle.Yarp</PackageId>
+    <PackageTags>swagger;swaggerui;discovery;webapi;aspnet;aspnetcore</PackageTags>
+    <Title>Swashbuckle.Yarp</Title>
+    <Description>A package to simplify adding authentication to the Swagger.</Description>
+    <Authors>Shahriyar Qulami</Authors>
+    <PackageProjectUrl>https://github.com/ctyar/Swashbuckle.Yarp</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ctyar/Swashbuckle.Yarp</RepositoryUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <None Include="..\..\README.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+
+</Project>

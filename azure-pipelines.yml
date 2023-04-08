@@ -1,0 +1,79 @@
+# https://docs.microsoft.com/azure/devops/pipelines/yaml-schema
+
+variables:
+  - group: 'Secrets'
+
+stages:
+- stage: BuildStage
+  displayName: 'Build'
+  jobs:
+  - job: BuildJob
+    displayName: 'Build'
+    pool:
+      vmImage: 'ubuntu-latest'
+
+    steps:
+    - checkout: self
+      fetchDepth: 0
+
+    - task: UseDotNet@2
+      displayName: 'Install .NET SDK'
+      inputs:
+        useGlobalJson: true
+
+    - task: DotNetCoreCLI@2
+      displayName: 'dotnet format'
+      inputs:
+        command: 'custom'
+        custom: 'format'
+        arguments: '--verify-no-changes'
+
+    - task: DotNetCoreCLI@2
+      displayName: 'Build solution'
+      inputs:
+        command: 'build'
+        projects: |
+          Swashbuckle.Yarp.sln
+
+    - task: DotNetCoreCLI@2
+      displayName: 'Pack'
+      inputs:
+        command: pack
+        packDirectory: 'artifacts'
+
+    - publish: '$(Build.Repository.LocalPath)/artifacts'
+      displayName: 'Publish artifacts'
+      artifact: 'packages'
+
+    - task: DotNetCoreCLI@2
+      displayName: 'Push to GitHub'
+      condition: eq(variables['Build.SourceBranch'], 'refs/heads/main')
+      inputs:
+        command: 'custom'
+        custom: 'nuget'
+        arguments: 'push artifacts/*.nupkg --skip-duplicate --api-key $(GitHubPackageRepositoryKey) --source https://nuget.pkg.github.com/ctyar/index.json'
+
+- stage: DeployStage
+  displayName: 'Deploy'
+  jobs:
+    - deployment: NugetDeployJob
+      displayName: 'Deploy to Nuget.org'
+      pool:
+        vmImage: 'ubuntu-latest'
+      environment: 'NugetEnvironment'
+      strategy:
+        runOnce:
+          deploy:
+            steps:
+
+            - download: current
+              displayName: 'Download artifacts'
+              artifact: 'packages'
+
+            - task: DotNetCoreCLI@2
+              displayName: 'Push to Nuget.org'
+              condition: eq(variables['Build.SourceBranch'], 'refs/heads/main')
+              inputs:
+                command: 'custom'
+                custom: 'nuget'
+                arguments: 'push $(Pipeline.Workspace)/packages/*.nupkg --api-key $(NugetKey) --source https://api.nuget.org/v3/index.json'

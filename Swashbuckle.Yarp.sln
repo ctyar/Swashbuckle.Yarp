@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33417.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Swashbuckle.Yarp", "src\Swashbuckle.Yarp\Swashbuckle.Yarp.csproj", "{1F632314-9557-4DA3-B45E-4206CBC572C2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{33DB5CC3-65F4-4C33-82D5-2CEB28BA2933}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yarp", "src\samples\Yarp\Yarp.csproj", "{44681731-CD46-4502-A1EB-531249FF91CB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{347F7889-616C-4D5E-81A8-657AB63805A6}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		azure-pipelines.yml = azure-pipelines.yml
+		.github\dependabot.yml = .github\dependabot.yml
+		Directory.Build.props = Directory.Build.props
+		global.json = global.json
+		LICENSE = LICENSE
+		README.md = README.md
+		version.json = version.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{32D8D52F-6C9F-4F52-86CC-88C9BB0F008D}"
+	ProjectSection(SolutionItems) = preProject
+		.github\dependabot.yml = .github\dependabot.yml
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api1", "src\samples\Api1\Api1.csproj", "{1862D16F-5A8C-4E52-8F13-F9D08FE006D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api2", "src\samples\Api2\Api2.csproj", "{40BC549C-FAA3-4685-8979-0404BC1B0735}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F632314-9557-4DA3-B45E-4206CBC572C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F632314-9557-4DA3-B45E-4206CBC572C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F632314-9557-4DA3-B45E-4206CBC572C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F632314-9557-4DA3-B45E-4206CBC572C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44681731-CD46-4502-A1EB-531249FF91CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44681731-CD46-4502-A1EB-531249FF91CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44681731-CD46-4502-A1EB-531249FF91CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44681731-CD46-4502-A1EB-531249FF91CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1862D16F-5A8C-4E52-8F13-F9D08FE006D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1862D16F-5A8C-4E52-8F13-F9D08FE006D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1862D16F-5A8C-4E52-8F13-F9D08FE006D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1862D16F-5A8C-4E52-8F13-F9D08FE006D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40BC549C-FAA3-4685-8979-0404BC1B0735}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40BC549C-FAA3-4685-8979-0404BC1B0735}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40BC549C-FAA3-4685-8979-0404BC1B0735}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40BC549C-FAA3-4685-8979-0404BC1B0735}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{44681731-CD46-4502-A1EB-531249FF91CB} = {33DB5CC3-65F4-4C33-82D5-2CEB28BA2933}
+		{32D8D52F-6C9F-4F52-86CC-88C9BB0F008D} = {347F7889-616C-4D5E-81A8-657AB63805A6}
+		{1862D16F-5A8C-4E52-8F13-F9D08FE006D5} = {33DB5CC3-65F4-4C33-82D5-2CEB28BA2933}
+		{40BC549C-FAA3-4685-8979-0404BC1B0735} = {33DB5CC3-65F4-4C33-82D5-2CEB28BA2933}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FF1E7A8E-E05F-4A8D-8B03-FBF3F5BE1062}
+	EndGlobalSection
+EndGlobal
