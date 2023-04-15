@@ -2,7 +2,7 @@
 
 [![Build Status](https://ctyar.visualstudio.com/Swashbuckle.Yarp/_apis/build/status%2Fctyar.Swashbuckle.Yarp?branchName=main)](https://ctyar.visualstudio.com/Swashbuckle.Yarp/_build/latest?definitionId=7&branchName=main)
 
-A package to simplify using Swashbuckle Swagger behind Yarp.
+A package to simplify using Swashbuckle Swagger behind YARP.
 
 ## Usage
 
@@ -30,7 +30,7 @@ app.UseSwagger(o =>
 });
 ```
 
-You can check the [samples](/samples) directory for a complete working sample.
+You can check the [samples](/src/samples) directory for a complete working sample.
 
 ## Build
 [Install](https://get.dot.net) the [required](global.json) .NET SDK.
