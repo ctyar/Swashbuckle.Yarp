@@ -13,7 +13,10 @@ public class Program
 
         var app = builder.Build();
 
-        app.UseSwagger();
+        app.UseSwagger(o =>
+        {
+            o.AddYarp("api2");
+        });
         app.UseSwaggerUI();
 
         app.MapControllers();

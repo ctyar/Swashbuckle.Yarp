@@ -15,7 +15,7 @@ public class Program
 
         app.UseSwagger(o =>
         {
-            o.AddYarp();
+            o.AddYarp("api1");
         });
         app.UseSwaggerUI();
 

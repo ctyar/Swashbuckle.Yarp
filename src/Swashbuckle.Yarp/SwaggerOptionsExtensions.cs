@@ -10,16 +10,23 @@ public static class SwaggerOptionsExtensions
     /// Set the clientId and scopes for the authorizatonCode flow with proof Key for Code Exchange.
     /// </summary>
     /// <param name="options"></param>
-    public static void AddYarp(this SwaggerOptions options)
+    public static void AddYarp(this SwaggerOptions options, string prefix)
     {
         options.PreSerializeFilters.Add((document, request) =>
         {
-            var prefix = request.Headers["X-Forwarded-Prefix"].FirstOrDefault();
+            var isForwarded = request.Headers["X-Forwarded-Host"].Any();
 
-            if (prefix is null)
+            if (!isForwarded)
             {
                 return;
             }
+
+            if (!prefix.StartsWith('/'))
+            {
+                prefix = '/' + prefix;
+            }
+
+            prefix = prefix.TrimEnd('/');
 
             var openApiPaths = new OpenApiPaths();
             foreach (var path in document.Paths)
