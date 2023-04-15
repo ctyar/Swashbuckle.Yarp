@@ -12,7 +12,7 @@
 
   <PropertyGroup>
     <PackageId>Ctyar.Swashbuckle.Yarp</PackageId>
-    <PackageTags>swagger;swaggerui;discovery;webapi;aspnet;aspnetcore</PackageTags>
+    <PackageTags>swagger;swaggerui;discovery;webapi;aspnet;aspnetcore;yarp;reverseproxy</PackageTags>
     <Title>Swashbuckle.Yarp</Title>
     <Description>A package to simplify adding authentication to the Swagger.</Description>
     <Authors>Shahriyar Qulami</Authors>
