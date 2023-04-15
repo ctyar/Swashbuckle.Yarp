@@ -7,9 +7,10 @@ namespace Microsoft.Extensions.DependencyInjection;
 public static class SwaggerOptionsExtensions
 {
     /// <summary>
-    /// Set the clientId and scopes for the authorizatonCode flow with proof Key for Code Exchange.
+    /// Enables Swagger to rewrite all of its paths whether called from YARP or directly.
     /// </summary>
     /// <param name="options"></param>
+    /// <param name="prefix">The prefix to add to all paths if Swagger is being called through YARP.</param>
     public static void AddYarp(this SwaggerOptions options, string prefix)
     {
         options.PreSerializeFilters.Add((document, request) =>

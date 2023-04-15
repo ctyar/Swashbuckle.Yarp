@@ -20,7 +20,7 @@ A package to simplify using Swashbuckle Swagger behind YARP.
   ]
 }
 ```
-With this config calling `/api1` of your YARP will redirect to your RESTful API.
+With this configuration, calling /api1 of your YARP will redirect to your RESTful API
 
 2. Add `AddYarp()` with the same prefix in your RESTful API:
 ```csharp
@@ -30,7 +30,7 @@ app.UseSwagger(o =>
 });
 ```
 
-You can check the [samples](/src/samples) directory for a complete working sample.
+You can check the [samples](/src/samples) directory for a complete working example.
 
 ## Build
 [Install](https://get.dot.net) the [required](global.json) .NET SDK.
