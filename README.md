@@ -1,5 +1,7 @@
 # Swashbuckle Yarp
 
+[![Build Status](https://ctyar.visualstudio.com/Swashbuckle.Yarp/_apis/build/status%2Fctyar.Swashbuckle.Yarp?branchName=main)](https://ctyar.visualstudio.com/Swashbuckle.Yarp/_build/latest?definitionId=7&branchName=main)
+
 A package to simplify using Swashbuckle Swagger behind Yarp.
 
 ## Usage
