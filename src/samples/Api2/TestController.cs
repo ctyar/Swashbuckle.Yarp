@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace Sample;
+namespace Api2;
 
 [Route("")]
 [ApiController]

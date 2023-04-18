@@ -1,4 +1,4 @@
-namespace Api;
+namespace Api2;
 
 public class Program
 {
@@ -15,6 +15,8 @@ public class Program
 
         app.UseSwagger(o =>
         {
+            // The prefix is set here explicitly.
+            // For reading the prefix from the X-Forwarded-Prefix header see https://github.com/ctyar/Swashbuckle.Yarp/blob/main/src/samples/Api1/Program.cs#L21
             o.AddYarp("api2");
         });
         app.UseSwaggerUI();
