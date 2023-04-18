@@ -31,7 +31,7 @@ app.UseSwagger(o =>
 });
 ```
 
-You can check the [samples](/src/samples) directory for a complete working example.
+You can check the [samples](/src/samples) directory for a complete working example with different approaches.
 
 ## Build
 [Install](https://get.dot.net) the [required](global.json) .NET SDK.
