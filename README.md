@@ -1,6 +1,7 @@
 # Swashbuckle Yarp
 
 [![Build Status](https://ctyar.visualstudio.com/Swashbuckle.Yarp/_apis/build/status%2Fctyar.Swashbuckle.Yarp?branchName=main)](https://ctyar.visualstudio.com/Swashbuckle.Yarp/_build/latest?definitionId=7&branchName=main)
+[![Ctyar.Swashbuckle.Yarp](https://img.shields.io/nuget/v/Ctyar.Swashbuckle.Yarp.svg)](https://www.nuget.org/packages/Ctyar.Swashbuckle.Yarp/)
 
 A package to simplify using Swashbuckle Swagger behind YARP.
 
