@@ -27,7 +27,7 @@ public static class SwaggerOptionsExtensions
                 return;
             }
 
-            if (!prefix.StartsWith('/'))
+            if (!prefix.StartsWith("/"))
             {
                 prefix = '/' + prefix;
             }
@@ -60,7 +60,7 @@ public static class SwaggerOptionsExtensions
                 return;
             }
 
-            if (!prefix.StartsWith('/'))
+            if (!prefix.StartsWith("/"))
             {
                 prefix = '/' + prefix;
             }
