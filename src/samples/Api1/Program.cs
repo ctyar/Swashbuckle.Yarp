@@ -15,10 +15,7 @@ public class Program
 
         app.UseSwagger(o =>
         {
-            // YARP for this sample is configured to set the X-Forwarded-Prefix header.
-            // See https://github.com/ctyar/Swashbuckle.Yarp/blob/main/src/samples/Yarp/appsettings.json#L13-L20
-            // For explicitly setting the prefix see https://github.com/ctyar/Swashbuckle.Yarp/blob/main/src/samples/Api2/Program.cs#L20
-            o.AddYarp();
+            o.AddYarp("/api1");
         });
         app.UseSwaggerUI();
 

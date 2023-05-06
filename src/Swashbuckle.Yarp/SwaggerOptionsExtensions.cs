@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.ComponentModel;
+using System.Linq;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Swagger;
 
@@ -8,21 +10,16 @@ public static class SwaggerOptionsExtensions
 {
     /// <summary>
     /// Enables Swagger to rewrite all of its paths whether called from YARP or directly.
-    /// The prefix will be determined using the X-Forwarded-Prefix header.
     /// </summary>
     /// <param name="options"></param>
-    public static void AddYarp(this SwaggerOptions options)
+    /// <param name="prefix">The prefix to add to all paths if Swagger is being called through YARP.</param>
+    public static void AddYarp(this SwaggerOptions options, string prefix)
     {
         options.PreSerializeFilters.Add((document, request) =>
         {
-            if (!request.Headers.TryGetValue("X-Forwarded-Prefix", out var headerValue))
-            {
-                return;
-            }
+            var isForwarded = request.Headers["X-Forwarded-Host"].Any();
 
-            var prefix = headerValue.FirstOrDefault();
-
-            if (prefix is null)
+            if (!isForwarded)
             {
                 return;
             }
@@ -46,16 +43,33 @@ public static class SwaggerOptionsExtensions
 
     /// <summary>
     /// Enables Swagger to rewrite all of its paths whether called from YARP or directly.
+    /// The prefix will be determined using the X-Forwarded-Prefix header.
     /// </summary>
     /// <param name="options"></param>
-    /// <param name="prefix">The prefix to add to all paths if Swagger is being called through YARP.</param>
-    public static void AddYarp(this SwaggerOptions options, string prefix)
+    [EditorBrowsable(EditorBrowsableState.Never)]
+    [Obsolete("Use AddYarpWithForwardedPrefix() instead")]
+    public static void AddYarp(this SwaggerOptions options)
+    {
+        AddYarpWithForwardedPrefix(options);
+    }
+
+    /// <summary>
+    /// Enables Swagger to rewrite all of its paths whether called from YARP or directly.
+    /// The prefix will be determined using the X-Forwarded-Prefix header.
+    /// </summary>
+    /// <param name="options"></param>
+    public static void AddYarpWithForwardedPrefix(this SwaggerOptions options)
     {
         options.PreSerializeFilters.Add((document, request) =>
         {
-            var isForwarded = request.Headers["X-Forwarded-Host"].Any();
+            if (!request.Headers.TryGetValue("X-Forwarded-Prefix", out var headerValue))
+            {
+                return;
+            }
 
-            if (!isForwarded)
+            var prefix = headerValue.FirstOrDefault();
+
+            if (prefix is null)
             {
                 return;
             }
