@@ -14,7 +14,7 @@
     <PackageId>Ctyar.Swashbuckle.Yarp</PackageId>
     <PackageTags>swagger;swaggerui;discovery;webapi;aspnet;aspnetcore;yarp;reverseproxy</PackageTags>
     <Title>Swashbuckle.Yarp</Title>
-    <Description>A package to simplify adding authentication to the Swagger.</Description>
+    <Description>A package to simplify using Swashbuckle behind YARP.</Description>
     <Authors>Shahriyar Qulami</Authors>
     <PackageProjectUrl>https://github.com/ctyar/Swashbuckle.Yarp</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ctyar/Swashbuckle.Yarp</RepositoryUrl>
