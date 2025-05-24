@@ -4,10 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <OpenApiGenerateDocuments>false</OpenApiGenerateDocuments>
     <LangVersion>preview</LangVersion>
-    <Nullable>enable</Nullable>
     <RootNamespace>Ctyar.Swashbuckle.Yarp</RootNamespace>
-    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
-    <AnalysisLevel>preview</AnalysisLevel>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -22,7 +19,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="8.1.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" />
     <None Include="..\..\README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
