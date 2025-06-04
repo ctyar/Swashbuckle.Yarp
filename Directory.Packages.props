@@ -4,7 +4,7 @@
   </PropertyGroup>
  
   <ItemGroup>
-    <PackageVersion Include="Swashbuckle.AspNetCore" Version="8.1.3" />
+    <PackageVersion Include="Swashbuckle.AspNetCore" Version="8.1.4" />
     <PackageVersion Include="Nerdbank.GitVersioning" Version="3.7.115" />
     <PackageVersion Include="DotNet.ReproducibleBuilds" Version="1.2.25" />
     <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="9.0.5" />
