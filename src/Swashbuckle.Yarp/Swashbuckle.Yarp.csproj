@@ -1,9 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <OpenApiGenerateDocuments>false</OpenApiGenerateDocuments>
-    <LangVersion>preview</LangVersion>
     <RootNamespace>Ctyar.Swashbuckle.Yarp</RootNamespace>
   </PropertyGroup>
 

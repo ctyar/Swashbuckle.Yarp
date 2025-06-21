@@ -1,5 +1,9 @@
-﻿using System.Net.Mime;
+﻿using System;
+using System.Net.Mime;
 using System.Text;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+
 internal static class ResultsExtensions
 {
     public static IResult Html(this IResultExtensions resultExtensions, string html)
