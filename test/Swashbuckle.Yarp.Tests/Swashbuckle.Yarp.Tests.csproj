@@ -23,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" VersionOverride="10.0.1" />
     <ProjectReference Include="..\..\src\Swashbuckle.Yarp\Swashbuckle.Yarp.csproj" />
   </ItemGroup>
 
