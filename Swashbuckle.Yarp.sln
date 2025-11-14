@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.6.33417.168
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11205.157 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Swashbuckle.Yarp", "src\Swashbuckle.Yarp\Swashbuckle.Yarp.csproj", "{1F632314-9557-4DA3-B45E-4206CBC572C2}"
 EndProject
@@ -32,6 +32,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api1", "src\samples\Api1\Ap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api2", "src\samples\Api2\Api2.csproj", "{40BC549C-FAA3-4685-8979-0404BC1B0735}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swashbuckle.Yarp.Tests", "test\Swashbuckle.Yarp.Tests\Swashbuckle.Yarp.Tests.csproj", "{F9F2A18A-DF30-4B0E-899E-1B3BE0240E83}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,6 +56,10 @@ Global
 		{40BC549C-FAA3-4685-8979-0404BC1B0735}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40BC549C-FAA3-4685-8979-0404BC1B0735}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40BC549C-FAA3-4685-8979-0404BC1B0735}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9F2A18A-DF30-4B0E-899E-1B3BE0240E83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9F2A18A-DF30-4B0E-899E-1B3BE0240E83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9F2A18A-DF30-4B0E-899E-1B3BE0240E83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9F2A18A-DF30-4B0E-899E-1B3BE0240E83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
