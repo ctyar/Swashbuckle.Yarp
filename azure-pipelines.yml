@@ -19,6 +19,16 @@ stages:
     - task: UseDotNet@2
       displayName: 'Install .NET SDK'
       inputs:
+        version: '8.x'
+
+    - task: UseDotNet@2
+      displayName: 'Install .NET SDK'
+      inputs:
+        version: '9.x'
+
+    - task: UseDotNet@2
+      displayName: 'Install .NET SDK'
+      inputs:
         useGlobalJson: true
 
     - task: DotNetCoreCLI@2
