@@ -21,7 +21,7 @@ public static class SwaggerOptionsExtensions
     {
         options.PreSerializeFilters.Add((document, request) =>
         {
-            var isForwarded = request.Headers["X-Forwarded-Host"].Any();
+            var isForwarded = request.Headers["X-Forwarded-Host"].Count != 0;
 
             if (!isForwarded)
             {
